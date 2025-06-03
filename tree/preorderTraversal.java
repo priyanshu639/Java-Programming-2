@@ -1,3 +1,7 @@
+
+import java.util.ArrayDeque;
+import java.util.Queue;
+
 class Node{
     int val;
     Node left;
@@ -28,7 +32,10 @@ public class preorderTraversal {
 
         System.out.print(" Postorder : " ) ;
         postorder(root);
+        System.out.println();
 
+        System.out.print(" levelorder : " ) ;
+        levelorder(root);
 
 
     }
@@ -40,15 +47,33 @@ public class preorderTraversal {
     }
     private static void Inorder(Node root){
         if(root==null) return ;
-        System.out.print(root.val+ " ");
+        
         Inorder(root.left);
+        System.out.print(root.val+ " ");
         Inorder(root.right);
     }
     private static void postorder(Node root){
         if(root==null) return ;
-        System.out.print(root.val+ " ");
+        
         postorder(root.left);
         postorder(root.right);
+        System.out.print(root.val+ " ");
+    }
+
+    private static void levelorder(Node root){
+        Queue<Node> l=new ArrayDeque<>();
+        if(root!=null) l.add(root);
+        
+        while(l.size()>0){
+            Node front =l.remove();
+            System.out.print(front.val + " ");
+            if(front.left!=null) l.add(front.left);
+
+            if(front.right!=null) l.add(front.right);
+
+            
+        }
+        
     }
 }
 

@@ -91,7 +91,7 @@ public class NodeofTree {
         
     }
     private static  int level (Node root){
-        if(root==null) return 1;
+        if(root==null) return 0;
         int ans=root.val;
         int ans2 =level(root.left);
         int ans3 =level(root.right);
