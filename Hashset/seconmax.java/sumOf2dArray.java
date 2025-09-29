@@ -10,14 +10,8 @@ public class sumOf2dArray {
         
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                
-                        res[i][j]=arr1[i][j]+arr2[i][j];
-                
-            
-                }
-                
-            
-            
+                res[i][j]=arr1[i][j]+arr2[i][j];
+            }
         }
         for(int[] ele:res){
             for(int x : ele){
@@ -25,6 +19,7 @@ public class sumOf2dArray {
 
             }
         }
+       
 
     }
     
