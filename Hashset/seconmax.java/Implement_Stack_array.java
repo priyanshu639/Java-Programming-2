@@ -20,12 +20,16 @@ public class Implement_Stack_array {
 
         }
         public int peek(){
-            if(tracker==0)
+            if(tracker==0){
+                return -1;
+            }
             return arr.get(tracker-1);
-        } 
+           } 
+        }
         public int pop(){
             if(tracker==0){
                 System.out.println("underflow");
+                return -1;
             }
             tracker--;
             return arr.get(tracker);
