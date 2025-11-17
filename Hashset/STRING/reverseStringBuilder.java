@@ -1,5 +1,6 @@
 class reverseStringBuilder{
     public static void main(String[] args) {
+        // reverse string withou builtin functions
         StringBuilder sb=new StringBuilder("abcde");
         int high=sb.length()-1;
         int st=0;

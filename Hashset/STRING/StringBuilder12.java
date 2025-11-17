@@ -5,6 +5,9 @@ public class StringBuilder12 {
         // StringBuilder sb =new StringBuilder(10);
         // System.out.println(sb.length());
         // System.out.println(sb.capacity());
+
+        // toggle the string means capital letter to small and small letter to capital
+        
         Scanner sc=new Scanner(System.in);
 
         StringBuilder sb =new StringBuilder(sc.nextLine());
