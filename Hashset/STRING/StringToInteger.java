@@ -1,4 +1,5 @@
 public class StringToInteger {
+    // finding the maximum value from the string array of integer data
     public static void main(String[] args) {
         // String s[]={"asxds","dsffvec","dvfcc"};
         String s[]={"1233","232435","33875924"};

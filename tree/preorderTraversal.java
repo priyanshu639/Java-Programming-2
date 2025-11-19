@@ -12,6 +12,7 @@ class Node{
 
 }
 public class preorderTraversal {
+    
     public static void main(String[] args) {
         Node root =new Node(1);
         Node b =new Node(2);
@@ -37,8 +38,30 @@ public class preorderTraversal {
         System.out.print(" levelorder : " ) ;
         levelorder(root);
 
+        System.out.println();
 
+        System.out.print(" Levelorder : " ) ;
+        Levelorder(root);
+
+
+        System.out.println();
+
+        System.out.print(" NthLevelorder : " ) ;
+        
+        nthhLevel(root, 0);
+
+
+        System.out.println();
+        System.out.print(" Levelorder using dfs : " ) ;
+        for(int x=0;x<=3;x++){  //ye jo 3 h wo number of total levels h tree ke
+            
+            LEVELORDER(root, 0,x);
+        }
     }
+
+
+
+
     private static void preorder(Node root){
         if(root==null) return ;
         System.out.print(root.val+" ");
@@ -60,6 +83,8 @@ public class preorderTraversal {
         System.out.print(root.val+ " ");
     }
 
+    
+
     private static void levelorder(Node root){
         Queue<Node> l=new ArrayDeque<>();
         if(root!=null) l.add(root);
@@ -74,6 +99,44 @@ public class preorderTraversal {
             
         }
         
+    }
+
+    // level order from right to left;
+
+    private static void Levelorder(Node root){
+        Queue<Node> l=new ArrayDeque<>();
+        if(root!=null) l.add(root);
+        
+        while(l.size()>0){
+            Node front =l.remove();
+            System.out.print(front.val + " ");
+            if(front.right!=null) l.add(front.right);
+            if(front.left!=null) l.add(front.left);
+
+            
+
+            
+        }
+        
+    }
+
+
+    private static void nthhLevel(Node root,int level){
+        int m=2;
+        if(root==null) return ;
+        if(level==m)System.out.print(root.val+" ");
+        nthhLevel(root.left,level+1);
+        nthhLevel(root.right,level+1);
+    }
+
+    // level order traversal using dfs or preoder
+    
+    private static void LEVELORDER(Node root,int level,int lvl){//here level is for current level and lvl for destination level
+        
+        if(root==null) return ;
+        if(level==lvl)System.out.print(root.val+" ");
+        LEVELORDER(root.left,level+1,lvl);
+        LEVELORDER(root.right,level+1,lvl);
     }
 }
 

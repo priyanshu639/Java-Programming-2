@@ -17,7 +17,7 @@ public class firstmax_secMAx {
 
             }
         }
-        System.out.println("first maximum is : " + fmax +"and second maximum is " + smax);
+        System.out.println("first maximum is : " + fmax +" and second maximum is " + smax);
     }
     
 }

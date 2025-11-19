@@ -45,7 +45,7 @@ public class NodeofTree {
     }
     private static  void display (Node root){
         if(root==null) return;
-        System.out.print(root.val + " ->");
+        System.out.print(root.val + " ");
         display(root.left);
         display(root.right);
         
@@ -83,7 +83,9 @@ public class NodeofTree {
 
     private static  int Size (Node root){
         if(root==null) return 0;
-        int ans=root.val; 
+        int ans=root.val;
+        
+        
         return  1 + Size(root.left) + Size(root.right);
 
         
