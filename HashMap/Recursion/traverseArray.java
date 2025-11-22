@@ -2,7 +2,7 @@ public class traverseArray {
 
     public static void print(int i,int arr[]){
         if(i==arr.length)return;
-            System.out.println(arr[i]+" ");
+            System.out.print(arr[i]+" ");
         print(i+1,arr);
 
     }
