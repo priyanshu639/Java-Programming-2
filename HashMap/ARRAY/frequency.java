@@ -1,6 +1,8 @@
 import java.util.HashMap;
 
 public class frequency {
+    // count frequency of array using hashmap
+
     public static void main(String[] args) {
         int arr[]={0,0,0,1,2,3,1,2,2,2,21};
         
