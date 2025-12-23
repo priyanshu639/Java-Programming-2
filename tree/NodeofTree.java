@@ -40,6 +40,8 @@ public class NodeofTree {
         // lvel
         System.out.println(level(root));
 
+        System.out.println();
+         System.out.println(Size(root));
         
 
     }
@@ -83,7 +85,7 @@ public class NodeofTree {
 
     private static  int Size (Node root){
         if(root==null) return 0;
-        int ans=root.val; 
+        
         return  1 + Size(root.left) + Size(root.right);
 
         
