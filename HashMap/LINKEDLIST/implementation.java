@@ -9,6 +9,24 @@ class Node{
 
 public class implementation {
     
+    public static void printRecursively(Node head){
+        Node temp=head;
+        if(temp==null) {
+            return;
+        }
+        System.out.println(temp.val);
+        printRecursively(temp.next);
+        
+        
+    }
+    public static void print(Node head){
+        Node temp=head;
+        while(temp!=null){
+            System.out.println(temp.val);
+            temp=temp.next;
+        }
+    }
+    
     public static void main(String[] args) {
         Node c1=new Node(5, "kia");
         Node c2=new Node(4, "nia");
@@ -49,6 +67,11 @@ public class implementation {
         System.out.println(c1.next.next.val);
         System.out.println(c1.next.next.next.val);
 
+
+        System.out.println("printing while loop");
+        print(c1);
+        System.out.println("printing recursively");
+        printRecursively(c1);
         
 
     }
