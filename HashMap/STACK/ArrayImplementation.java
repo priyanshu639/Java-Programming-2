@@ -57,7 +57,7 @@ public class ArrayImplementation {
         }
         void display(){
             for (int i = 0; i <=idx-1; i++) {
-                System.out.print(arr[i]+"->");
+                System.out.print(arr[i]+"-->");
                 
             }
 
