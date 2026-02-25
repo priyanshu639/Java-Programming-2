@@ -1,7 +1,6 @@
 
-
 import java.util.*;
-public class infixToPostfix{
+public class infixToPrefix{
 
     public static void main(String[] args) {
         String infix="9-(5+3)*4/6";
@@ -27,7 +26,7 @@ public class infixToPostfix{
                     String val2=val.pop();
                     String val1 =val.pop();
                     char o=op.pop();
-                    String t=val1+val2+o;
+                    String t=o+val1+val2;
                     val.push(t);
 
                 }
@@ -38,7 +37,7 @@ public class infixToPostfix{
                         String val2=val.pop();
                         String val1 =val.pop();
                         char o=op.pop();
-                        String t=val1+val2+o;
+                        String t=o+val1+val2;
                         val.push(t);
                         op.push(ch);
                         }
@@ -48,7 +47,7 @@ public class infixToPostfix{
                             String val2=val.pop();
                             String val1 =val.pop();
                             char o=op.pop();
-                            String t=val1+val2+o;
+                            String t=o+val1+val2;
                             val.push(t);
                             op.push(ch);
                         }
@@ -65,7 +64,7 @@ public class infixToPostfix{
             String val2=val.pop();
             String val1 =val.pop();
             char o=op.pop();
-            String t=val1+val2+o;
+            String t=o+val1+val2;
             val.push(t);
         }
         System.out.println(val.peek());
